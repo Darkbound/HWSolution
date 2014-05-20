@@ -9,7 +9,6 @@ namespace Homework_5
 
             string time = DateTime.Now.ToString("hh:mm tt");
             int hour = int.Parse(time.Substring(0, 2));
-            int minutes = int.Parse(time.Substring(3, 2));
             string tt = time.Substring(6);
 
             if (hour>=1 && tt == "PM")
