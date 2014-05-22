@@ -11,7 +11,6 @@ namespace Homework_6
 
             for (int i = 1; i <= n; i++)
             {
-
                 for (int j = i; j < n+i; j++)
                 {
                     Console.Write(j + " ");
