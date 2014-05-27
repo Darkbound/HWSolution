@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Homework_6
 {
@@ -9,30 +10,18 @@ namespace Homework_6
         {
             Console.Write("Enter n: ");
             int n = int.Parse(Console.ReadLine());
-            int[] numbers = new int[n];
-            int[] newnums = new int[n];
-            int[] indexes = new int[n];
+            List<int> numbers = new List<int>();        
             Random rand = new Random();
-
-
+ 
             for (int i = 0; i < n; i++)
             {
-                numbers[i] = i + 1;
-            }
-
-
-            for (int i = 0; i < n; i++)
-            {
-                int num = rand.Next(0, n);
-
-                while (indexes.Contains(num))
+                int num = rand.Next(0, n) + 1;
+ 
+                while (numbers.Contains(num))
                 {
-                    num = rand.Next(0, n);
+                    num = rand.Next(0, n) + 1;
                 }
-                
-                newnums[num] = numbers[i];
-                indexes[i] = num;
-
+                numbers.Add(num);
             }
             for (int i = 0; i < n; i++)
             {
