@@ -20,7 +20,7 @@ namespace _14.Decimal_to_Binary
                 sum += Math.Pow(2, j);
                 j++;                
             }
-            for (int i = 0; i < sum; i++)
+            for (int i = 0; i < j; i++)
             {
                 int numP = num >> i;  
                 int bit = numP & 1;
